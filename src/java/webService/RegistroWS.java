@@ -15,7 +15,7 @@ import javax.jws.WebParam;
  *
  * @author Camilo
  */
-@WebService(serviceName = "NewWebService")
+@WebService(serviceName = "Report")
 @Stateless()
 public class RegistroWS {
     @EJB
