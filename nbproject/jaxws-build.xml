@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8"?><!--
         *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
         *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
         *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
         *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
 
-        -->
-<project xmlns:xalan="http://xml.apache.org/xslt" xmlns:ejbjarproject2="http://www.netbeans.org/ns/j2ee-ejbjarproject/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:ejbjarproject2="http://www.netbeans.org/ns/j2ee-ejbjarproject/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
     <!--
                 ===================
                 JAX-WS WSGEN SECTION
@@ -43,8 +41,8 @@
     </target>
     <target name="wsimport-client-PersonWS" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/PersonWS"/>
-        <property name="wsdl-PersonWS" location="${meta.inf}/xml-resources/web-service-references/PersonWS/wsdl/25.17.240.192_8080/PersonWS/PersonWS.wsdl"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonWS" destdir="${build.generated.dir}/jax-wsCache/PersonWS" wsdl="${wsdl-PersonWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://25.17.240.192:8080/PersonWS/PersonWS?wsdl" xnocompile="true" xendorsed="true" package="Servicio">
+        <property name="wsdl-PersonWS" location="${meta.inf}/xml-resources/web-service-references/PersonWS/wsdl/25.21.174.183_8080/PersonWS/PersonWS.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonWS" destdir="${build.generated.dir}/jax-wsCache/PersonWS" wsdl="${wsdl-PersonWS}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://25.21.174.183:8080/PersonWS/PersonWS?wsdl" xnocompile="true" xendorsed="true" package="fachada">
             <depends file="${wsdl-PersonWS}"/>
             <produces dir="${build.generated.dir}/jax-wsCache/PersonWS"/>
         </wsimport>
@@ -56,7 +54,7 @@
     </target>
     <target name="wsimport-client-clean-PersonWS" depends="-init-project">
         <delete dir="${build.generated.dir}/jax-wsCache/PersonWS"/>
-        <delete dir="${build.generated.sources.dir}/jax-ws/Servicio"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/fachada"/>
     </target>
     <target name="wsimport-client-generate" depends="wsimport-client-PersonWS"/>
 </project>

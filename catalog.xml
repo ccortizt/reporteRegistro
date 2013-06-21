@@ -2,4 +2,8 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://25.17.240.192:8080/PersonWS/PersonWS?wsdl" uri="src/conf/xml-resources/web-service-references/PersonWS/wsdl/25.17.240.192_8080/PersonWS/PersonWS.wsdl"/>
     <system systemId="http://25.17.240.192:8080/PersonWS/PersonWS?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonWS/wsdl/25.17.240.192_8080/PersonWS/PersonWS.xsd_1.xsd"/>
+    <system systemId="file:/C:/Users/Camilo/Desktop/SRA/PersonWS.wsdl" uri="src/conf/xml-resources/web-service-references/PersonWS_1/wsdl/PersonWS.wsdl"/>
+    <system systemId="http://vvcap.net/db/KACpyUP3Xt2AIoCPZ0Z9.htp" uri="src/conf/xml-resources/web-service-references/KACpyUP3Xt2AIoCPZ0Z9/wsdl/vvcap.net/db/KACpyUP3Xt2AIoCPZ0Z9.htp"/>
+    <system systemId="http://25.21.174.183:8080/PersonWS/PersonWS?wsdl" uri="src/conf/xml-resources/web-service-references/PersonWS/wsdl/25.21.174.183_8080/PersonWS/PersonWS.wsdl"/>
+    <system systemId="http://25.21.174.183:8080/PersonWS/PersonWS?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonWS/wsdl/25.21.174.183_8080/PersonWS/PersonWS.xsd_1.xsd"/>
 </catalog>

@@ -4,48 +4,33 @@
  */
 package Servicio;
 
-import javax.xml.namespace.QName;
-import javax.xml.transform.Source;
-import javax.xml.ws.Dispatch;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.ws.Service;
-import java.io.StringReader;
+import fachada.ROb;
+
 
 /**
  *
  * @author Camilo
  */
 public class Servicios {
-
-    public boolean registerBirth(String name) {
-        Servicio.PersonWS_Service service = new Servicio.PersonWS_Service();
-        QName portQName = new QName("http://ws.dataejbsra.com/", "PersonWSPort");
-        String req = "<registerBirth  xmlns=\"http://ws.dataejbsra.com/\"><name>"+name+"</name></registerBirth>";
-        try {
-            // Call Web Service Operation
-            Dispatch<Source> sourceDispatch = null;
-            sourceDispatch = service.createDispatch(portQName, Source.class, Service.Mode.PAYLOAD);
-            Source result = sourceDispatch.invoke(new StreamSource(new StringReader(req)));
-        } catch (Exception ex) {
-            // TODO handle custom exceptions here
-            return false;
-        }
-        return true;
-    }
-
-    public boolean registerDeath(Long cedule) {
-        Servicio.PersonWS_Service service = new Servicio.PersonWS_Service();
-        QName portQName = new QName("http://ws.dataejbsra.com/", "PersonWSPort");
-        String req = "<registerDeath  xmlns=\"http://ws.dataejbsra.com/\"><cedule>"+cedule+"</cedule></registerDeath>";
-        try {
-            // Call Web Service Operation
-            Dispatch<Source> sourceDispatch = null;
-            sourceDispatch = service.createDispatch(portQName, Source.class, Service.Mode.PAYLOAD);
-            Source result = sourceDispatch.invoke(new StreamSource(new StringReader(req)));
-        } catch (Exception ex) {
-            return false;
-        }
-        return true;
-    }
     
+    public void registrarNacido(String nombre){
+      Servicios.registerBirth(nombre);
+    }
+    public void registrarMuerte(Long cedule){
+      Servicios.registerDeath(cedule);
+    }
+
+    public static ROb registerBirth(java.lang.String name) {
+        fachada.PersonWS_Service service = new fachada.PersonWS_Service();
+        fachada.PersonWS port = service.getPersonWSPort();
+        return port.registerBirth(name);
+    }
+
+    public static ROb registerDeath(java.lang.Long cedule) {
+        fachada.PersonWS_Service service = new fachada.PersonWS_Service();
+        fachada.PersonWS port = service.getPersonWSPort();
+        return port.registerDeath(cedule);
+    }
+   
+
 }

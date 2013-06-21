@@ -4,12 +4,13 @@
  */
 package webService;
 
-import fachada.fachada;
+import fachada.Fachada;
+import fachada.ROb;
 import javax.ejb.EJB;
-import javax.jws.WebService;
 import javax.ejb.Stateless;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebService;
 
 /**
  *
@@ -18,16 +19,16 @@ import javax.jws.WebParam;
 @WebService(serviceName = "Report")
 @Stateless()
 public class RegistroWS {
-    @EJB
-    private fachada ejbRef;
+     @EJB
+    private Fachada ejbRef;
 
     @WebMethod(operationName = "registrarNacido")
-    public boolean registrarNacido(@WebParam(name = "name") String name) {
+    public ROb registrarNacido(@WebParam(name = "name") String name) {
         return ejbRef.registrarNacido(name);
     }
 
     @WebMethod(operationName = "registrarDefuncion")
-    public boolean registrarDefuncion(@WebParam(name = "cedule") Long cedule) {
+    public ROb registrarDefuncion(@WebParam(name = "cedule") Long cedule) {
         return ejbRef.registrarDefuncion(cedule);
     }
     
